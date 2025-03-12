@@ -1,20 +1,20 @@
 public class shop {
-    private int usid;
+    private int sid;
     private int uid;
     private int Iid;
     private int count;
     private int inum;
 
-public shop(int usid, int uid, int iid, int count, int inum) {
-        this.usid = usid;
+public shop(int sid, int uid, int iid, int count, int inum) {
+        this.sid = sid;
         this.uid = uid;
         this.Iid = iid;
         this.count = count;
         this.inum = inum;
     }
 
-    public int getUsid() {
-        return usid;
+    public int getsid() {
+        return sid;
     }
     public int getUid(){
         return uid;

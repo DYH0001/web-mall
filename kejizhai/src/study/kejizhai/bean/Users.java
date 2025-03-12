@@ -1,14 +1,14 @@
-com.study.kejizhai.bean
+package study.kejizhai.bean;
 
-import java.util.Date
+import java.util.Date;
 
 public class Users {
-    private String Uuid;
+    private String Uid;
     private String Uname;
     private int age;
     private String password_Hash;
     private String telephone;
-}
+
 
 
 
@@ -25,8 +25,8 @@ private date CreateTime;
 private date UpdateTime;
 
 
-public Users(String Uuid, String Uname, int age, String address, String password, String telephone) { 
-        this.Uuid = Uuid;
+public Users(String Uid, String Uname, int age, String address, String password, String telephone) { 
+        this.Uid = Uid;
         this.Uname = Uname;
         this.age = age;
         this.address = address;
@@ -64,6 +64,7 @@ public String getPassword() {
 public void setPassword(String password) {
 }
 
-public String getUuid() {
-    return Uuid;
+public String getUid() {
+    return Uid;
+}
 }
