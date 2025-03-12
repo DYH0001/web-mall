@@ -8,6 +8,7 @@ public class Address {
     private String Street;
     private String detail;
 
+    Public Address() {};
 
 public Address( String telephone, String AddressID, String province, String city, String Street, String detail) {
     this.telephone = telephone;

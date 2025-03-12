@@ -5,6 +5,9 @@ public class shop {
     private int count;
     private int inum;
 
+    public shop() {
+    }
+
 public shop(int sid, int uid, int iid, int count, int inum) {
         this.sid = sid;
         this.uid = uid;
@@ -12,6 +15,7 @@ public shop(int sid, int uid, int iid, int count, int inum) {
         this.count = count;
         this.inum = inum;
     }
+
 
     public int getsid() {
         return sid;

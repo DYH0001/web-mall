@@ -12,6 +12,7 @@ public class Items {
     private String uptime;
     private int Istatus;  //show=0;hide=1;undercarriage=3;
 
+    public Items() {};
 public Items(String Iid, String Iname, int price, String description, String Iimage, String category, String shop, String uptime, int Istatus) {
     this.Iid = Iid;
     this.Iname = Iname;

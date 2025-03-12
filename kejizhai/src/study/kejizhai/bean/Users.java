@@ -8,23 +8,20 @@ public class Users {
     private int age;
     private String password_Hash;
     private String telephone;
-
-
-
-
-private enum role {
-    guest,
-    user,
-    admin,
-    support,
+    private enum role {
+        guest,
+        user,
+        admin,
+        support,
 }
 
-private boolean isPhoneVerified;
-private boolean isEmailVerified;
-private date CreateTime;
-private date UpdateTime;
+    private boolean isPhoneVerified;
+    private boolean isEmailVerified;
+    private date CreateTime;
+    private date UpdateTime;
 
-
+public Users() {
+    }
 public Users(String Uid, String Uname, int age, String address, String password, String telephone) { 
         this.Uid = Uid;
         this.Uname = Uname;
