@@ -8,10 +8,10 @@ public class Address {
     private String Street;
     private String detail;
 
-    Public Address() {};
+    public Address() {};
 
-public Address( String telephone, String AddressID, String province, String city, String Street, String detail) {
-    this.telephone = telephone;
+public Address( String Address_telephone, String AddressID, String province, String city, String Street, String detail) {
+    this.Address_telephone = Address_telephone;
     this.AddressID = AddressID;
     this.province = province;
     this.city = city;
