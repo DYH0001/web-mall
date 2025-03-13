@@ -1,5 +1,5 @@
 package study.kejizhai.bean;
-import java.util.list;
+import java.util.List;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 
@@ -13,8 +13,7 @@ public class shoppingcart {
 
     public shoppingcart() {}
 
-public shoppingcart(int uid, ArrayLsit iid, int count, int price) { 
-    this.scid = scid;
+public shoppingcart(int uid, ArrayList iid, int count, int price) { 
     this.uid = uid;
     this.iid = iid;
     this.count = count;
