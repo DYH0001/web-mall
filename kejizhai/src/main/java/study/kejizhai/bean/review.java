@@ -7,7 +7,7 @@ public class review{
     private int sid;
     private int Ireview;//0-5rank;
     private String Icomment;
-    private int Uid;
+    private String Uid;
 
 public review(){}
 
@@ -39,10 +39,10 @@ public int getIreview(){
 public String getIcomment(){
     return Icomment;
 }
-public int getUid(){
+public String getUid(){
     return Uid;
 }
-public void setIcomment(int Iid,int Oid,int Uid){
+public void setIcomment(int Iid,int Oid,String Uid){
     this.Iid=Iid;
     this.Oid=Oid;
     this.Uid=Uid;

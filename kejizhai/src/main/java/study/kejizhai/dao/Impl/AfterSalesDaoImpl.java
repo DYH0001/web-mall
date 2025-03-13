@@ -38,8 +38,7 @@ public class AfterSalesDaoImpl implements AfterSalesDao {
             throw new SQLException("添加售后记录失败", e);
         }
     }
-
-    @Override
+@Override
     public void updateAfterSales(AfterSales afterSales) throws SQLException {
         String sql = "UPDATE after_sales SET reason=?, type=?, status=?, update_time=?, " +
                     "finish_time=? WHERE user_id=? AND order_id=? AND item_id=?";
@@ -59,8 +58,9 @@ public class AfterSalesDaoImpl implements AfterSalesDao {
         }
     }
 
-    @Override
-    public void deleteAfterSales(int userId, int orderId, int itemId) throws SQLException {
+
+    @Override  
+    public void deleteAfterSales(String userId, String orderId, String itemId) throws SQLException {
         String sql = "DELETE FROM after_sales WHERE user_id=? AND order_id=? AND item_id=?";
         try {
             jdbcTemplate.update(sql, userId, orderId, itemId);
@@ -69,8 +69,8 @@ public class AfterSalesDaoImpl implements AfterSalesDao {
         }
     }
 
-    @Override
-    public AfterSales getAfterSales(int userId, int orderId, int itemId) throws SQLException {
+    @Override  
+    public AfterSales getAfterSales(String userId, String orderId, String itemId) throws SQLException {
         String sql = "SELECT * FROM after_sales WHERE user_id=? AND order_id=? AND item_id=?";
         try {
             List<AfterSales> results = jdbcTemplate.query(sql,
@@ -82,8 +82,8 @@ public class AfterSalesDaoImpl implements AfterSalesDao {
         }
     }
 
-    @Override
-    public List<AfterSales> getAfterSalesByUserId(int userId) throws SQLException {
+    @Override 
+    public List<AfterSales> getAfterSalesByUserId(String userId) throws SQLException {
         String sql = "SELECT * FROM after_sales WHERE user_id=? ORDER BY create_time DESC";
         try {
             return jdbcTemplate.query(sql,

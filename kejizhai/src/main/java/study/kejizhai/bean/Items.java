@@ -3,7 +3,7 @@ package study.kejizhai.bean;
 public class Items {
     private String Iid;
     private String Iname;
-    private int price;
+    private double price;
     private String description; //商品描述
     private String info;  //商品参数，对于不同分类的商品需要填写的参数应该不同，可能需要单独分个类？
     private String Iimage;
@@ -13,7 +13,7 @@ public class Items {
     private int Istatus;  //show=0;hide=1;undercarriage=3;
 
     public Items() {};
-public Items(String Iid, String Iname, int price, String description, String Iimage, String category, String shop, String uptime, int Istatus) {
+public Items(String Iid, String Iname, double price, String description, String Iimage, String category, String shop, String uptime, int Istatus) {
     this.Iid = Iid;
     this.Iname = Iname;
     this.price = price;
@@ -33,7 +33,7 @@ public String getIname(String Iid){
 }
 public void setIname(String Iid){
 }
-public int getPrice() {
+public double getPrice() {
     return price;
 }
 public void setPrice(int price) {

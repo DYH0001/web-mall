@@ -7,55 +7,57 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.sql.SQLException;
 
 @Service
 public class OrderServiceImpl implements OrderService {
+
     
     @Autowired
     private OrderDao orderDao;
 
     @Override
-    public List<Orders> getOrders(int uid) throws SqlException {
+    public List<Order> getOrders(int uid) throws SQLException {
         try {
             return orderDao.getOrders(uid);
-        } catch (SqlException e) {
-            throw new SqlException("获取订单列表失败: " + e.getMessage());
+        } catch (SQLException e) {
+            throw new SQLException("获取订单列表失败: " + e.getMessage());
         }
     }
 
     @Override
-    public boolean addOrder(Orders orders) throws SqlException {
+    public boolean addOrder(Order orders) throws SQLException {
         try {
             return orderDao.addOrder(orders);
-        } catch (SqlException e) {
-            throw new SqlException("添加订单失败: " + e.getMessage());
+        } catch (SQLException e) {
+            throw new SQLException("添加订单失败: " + e.getMessage());
         }
     }
 
     @Override
-    public boolean deleteOrder(int oid) throws SqlException {
+    public boolean deleteOrder(int oid) throws SQLException {
         try {
             return orderDao.deleteOrder(oid);
-        } catch (SqlException e) {
-            throw new SqlException("删除订单失败: " + e.getMessage());
+        } catch (SQLException e) {
+            throw new SQLException("删除订单失败: " + e.getMessage());
         }
     }
 
     @Override
-    public boolean changeOrder(Orders orders) throws SqlException {
+    public boolean changeOrder(Order orders) throws SQLException {
         try {
             return orderDao.changeOrder(orders);
-        } catch (SqlException e) {
-            throw new SqlException("修改订单失败: " + e.getMessage());
+        } catch (SQLException e) {
+            throw new SQLException("修改订单失败: " + e.getMessage());
         }
     }
 
     @Override
-    public List<Orders> searchOrders(String keyword) throws SqlException {
+    public List<Order> searchOrders(String keyword) throws SQLException {
         try {
             return orderDao.searchOrders(keyword);
-        } catch (SqlException e) {
-            throw new SqlException("搜索订单失败: " + e.getMessage());
+        } catch (SQLException e) {
+            throw new SQLException("搜索订单失败: " + e.getMessage());
         }
     }
 }

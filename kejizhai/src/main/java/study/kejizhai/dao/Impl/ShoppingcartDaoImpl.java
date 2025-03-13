@@ -1,7 +1,7 @@
 package study.kejizhai.dao.Impl;
 
 import study.kejizhai.bean.shoppingcart;
-import study.kejizhai.dao.ShoppingcartDao;
+import study.kejizhai.dao.shoppingcartDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
@@ -10,12 +10,11 @@ import java.sql.SQLException;
 import java.util.List;
 
 @Repository
-public class ShoppingcartDaoImpl implements ShoppingcartDao {
+public class shoppingcartDaoImpl implements shoppingcartDao {
     
     @Autowired
     private JdbcTemplate jdbcTemplate;
 
-    @Override
     public boolean addshoppingcart(shoppingcart shoppingcart) throws SQLException {
         String sql = "INSERT INTO shopping_cart (uid, iid, count, price) VALUES (?, ?, ?, ?)";
         try {
@@ -31,7 +30,7 @@ public class ShoppingcartDaoImpl implements ShoppingcartDao {
         }
     }
 
-    @Override
+    
     public List<shoppingcart> getshoppingcart(int Iuid) throws SQLException {
         String sql = "SELECT sc.*, i.price FROM shopping_cart sc " +
                     "JOIN items i ON sc.iid = i.iid " +
@@ -45,7 +44,7 @@ public class ShoppingcartDaoImpl implements ShoppingcartDao {
         }
     }
 
-    @Override
+    
     public boolean deleteShoppingcart(int scid) throws SQLException {
         String sql = "DELETE FROM shopping_cart WHERE scid = ?";
         try {
