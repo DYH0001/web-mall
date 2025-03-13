@@ -2,8 +2,8 @@ package study.kejizhai.bean;
 
 import java.util.Date;
 import java.util.List;
-import kejizhai.bean.user;
-import kejizhai.bean.order;
+import study.kejizhai.bean.Users;
+import study.kejizhai.bean.Order;
 
 
 

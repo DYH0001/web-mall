@@ -3,9 +3,9 @@ package study.kejizhai.bean;
 import java.util.Date;
 import java.util.List;
 
-import study.kejizhai.bean.Item;
+import study.kejizhai.bean.Items;
 import study.kejizhai.bean.Address;
-import study.kejizhai.bean.User;
+import study.kejizhai.bean.Users;
 
 /**
  * 订单类
@@ -17,9 +17,9 @@ public class Order {
     private Date orderDate;  
     private int Uid; //userId
     private String orderNumber; //订单号
-    private List<Item> orderItems; 
+    private List<Items> orderItems; 
     private double totalPrice;
-    private Address OrderAddress;
+    private Address orderAddress;
     private String payType;  //weixin,ali, bank;
     private int payStatus;  //paid=0,unpaid=1;
     private String deliveryStatus; //物流信息
@@ -30,7 +30,7 @@ public class Order {
 
 
     public Order(){}
-    public Order(int Oid, Date orderDate, int userId, String orderNumber, List<Item> orderItems, double totalPrice, Address address, String payType, int payStatus, String deliveryStatus, String deliveryCompany, String deliveryNumber, Date payDate, Date receiveDate) {
+    public Order(int Oid, Date orderDate, int userId, String orderNumber, List<Items> orderItems, double totalPrice, Address orderAddress, String payType, int payStatus, String deliveryStatus, String deliveryCompany, String deliveryNumber, Date payDate, Date receiveDate) {
         super();
         this.Oid = Oid;
         this.orderDate = orderDate;
@@ -38,7 +38,7 @@ public class Order {
         this.orderNumber = orderNumber;
         this.orderItems = orderItems;
         this.totalPrice = totalPrice;
-        this.Address = address;
+        this.orderAddress = orderAddress;
         this.payType = payType;
         this.payStatus = payStatus;
         this.deliveryStatus = deliveryStatus;
@@ -51,8 +51,8 @@ public class Order {
     public int getOid() {
         return Oid;
     }
-    public void setOid(int id) {
-        this.id = id;
+    public void setOid(int Oid) {
+        this.Oid = Oid;
     }
     public String getOrderNumber() {
         return orderNumber;
@@ -67,15 +67,15 @@ public class Order {
         this.orderDate = orderDate;
     }
     public int getUserId() {
-        return uid;
+        return Uid;
     }
-    public void setUserId(int userId) {
-        this.userId = userId;
+    public void setUserId(int Uid) {
+        this.Uid = Uid;
     }
-    public List<Item> getOrderItems() {
+    public List<Items> getOrderItems() {
         return orderItems;
     }
-    public void setOrderItems(List<Item> orderItems) {
+    public void setOrderItems(List<Items> orderItems) {
         this.orderItems = orderItems;
     }
     public double getTotalPrice() {
@@ -84,11 +84,11 @@ public class Order {
     public void setTotalPrice(double totalPrice) {
         this.totalPrice = totalPrice;
     }
-    public String getAddress() {
-        return address;
+    public Address getAddress() {
+        return orderAddress;
     }
-    public void setAddress(Address OrderAddress) {
-        this.Orderaddress = address;
+    public void setAddress(Address orderAddress) {
+        this.orderAddress = orderAddress;
     }
     
 }

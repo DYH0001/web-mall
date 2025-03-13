@@ -1,5 +1,5 @@
 package study.kejizhai.bean;
-import java.util.list;
+import java.util.List;
 
 public class review{
     private int Iid;

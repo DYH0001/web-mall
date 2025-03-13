@@ -1,3 +1,4 @@
+package study.kejizhai.bean;
 public class shop {
     private int sid;
     private int uid;
