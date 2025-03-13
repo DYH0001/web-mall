@@ -1,8 +1,10 @@
 package study.kejizhai.bean;
 
-
+import study.kejizhai.bean.Order;
 import study.kejizhai.bean.Address;
 import java.util.Date;
+import java.util.List;
+import java.util.ArrayList;
 
 
 public class Users {
@@ -23,17 +25,24 @@ public class Users {
     private boolean isEmailVerified;
     private Date CreateTime;
     private Date UpdateTime;
+    private List<Order> userOrders;
 
 public Users() {
     }
-public Users(String Uid, String Uname, int age, String address, String telephone, String password_Hash,String addressID) { 
+public Users(String Uid, String Uname, int age, String address, String telephone, String password_Hash,String addressID, boolean isPhoneVerified, boolean isEmailVerified, Date CreateTime, Date UpdateTime) { 
         this.Uid = Uid;
         this.Uname = Uname;
         this.age = age;
         this.addressID = addressID;
         this.password_Hash = password_Hash;
         this.telephone = telephone;
-}
+        this.isPhoneVerified = isPhoneVerified;
+        this.isEmailVerified = isEmailVerified;
+        this.CreateTime = CreateTime;
+        this.UpdateTime = UpdateTime;
+        this.userOrders = userOrders;
+    }
+
 
 
 

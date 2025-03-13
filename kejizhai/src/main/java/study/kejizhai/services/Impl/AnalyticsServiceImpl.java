@@ -12,6 +12,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.HashMap;
 import static java.lang.Math.*;
+import java.sql.SQLException;
 
 @Service
 public class AnalyticsServiceImpl implements AnalyticsService {
@@ -27,7 +28,7 @@ public class AnalyticsServiceImpl implements AnalyticsService {
 
         for (review r : reviews) {
             if (r.getUid().equals(user.getUid())) {
-                totalRating += r.getRating();
+                totalRating += r.getIreview();
                 count++;
             }
         }
@@ -63,10 +64,18 @@ public class AnalyticsServiceImpl implements AnalyticsService {
         int totalQuantity = 0;
 
         for (OrderService orderService : orders) {
-            List<Order> userOrders = orderService.getOrders(user.getUid());
-            for (Order order : userOrders) {
-                if (order.getPayStatus() == 0) { // 已支付订单
-                    totalQuantity += order.getOrderItems().size();
+            List<Order> userOrders = null;  // 在try块外声明
+            try {
+                userOrders = orderService.getOrders(user.getUid());
+            } catch (SQLException e) {
+                e.printStackTrace();
+                continue;  // 跳过这次循环继续处理其他订单
+            }
+            if (userOrders != null) {  // 添加空检查
+                for (Order order : userOrders) {
+                    if (order.getPayStatus() == 0) { // 已支付订单
+                        totalQuantity += order.getOrderItems().size();
+                    }
                 }
             }
         }
@@ -85,13 +94,21 @@ public class AnalyticsServiceImpl implements AnalyticsService {
         int repeatedItems = 0;
 
         for (OrderService orderService : orders) {
-            List<Order> userOrders = orderService.getOrders(user.getUid());
-            for (Order order : userOrders) {
-                if (order.getPayStatus() == 0) {
-                    for (Item item : order.getOrderItems()) {
-                        String itemId = item.getIid();
-                        itemPurchaseCount.put(itemId, itemPurchaseCount.getOrDefault(itemId, 0) + 1);
-                        totalItems++;
+            List<Order> userOrders = null;
+            try {
+                userOrders = orderService.getOrders(user.getUid());
+            } catch (SQLException e) {
+                e.printStackTrace();
+                continue;
+            }
+            if (userOrders != null) {
+                for (Order order : userOrders) {
+                    if (order.getPayStatus() == 0) {
+                        for (Items item : order.getOrderItems()) {
+                            String itemId = item.getIid();
+                            itemPurchaseCount.put(itemId, itemPurchaseCount.getOrDefault(itemId, 0) + 1);
+                            totalItems++;
+                        }
                     }
                 }
             }
@@ -115,10 +132,18 @@ public class AnalyticsServiceImpl implements AnalyticsService {
         double totalRevenue = 0.0;
 
         for (OrderService orderService : orders) {
-            List<Order> userOrders = orderService.getOrders(user.getUid());
-            for (Order order : userOrders) {
-                if (order.getPayStatus() == 0) {
-                    totalRevenue += order.getTotalPrice();
+            List<Order> userOrders = null;
+            try {
+                userOrders = orderService.getOrders(user.getUid());
+            } catch (SQLException e) {
+                e.printStackTrace();
+                continue;
+            }
+            if (userOrders != null) {
+                for (Order order : userOrders) {
+                    if (order.getPayStatus() == 0) {
+                        totalRevenue += order.getTotalPrice();
+                    }
                 }
             }
         }

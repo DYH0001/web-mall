@@ -15,7 +15,7 @@ public review(int Iid,int Oid,int sid,int Ireview,String Icomment){
     this.Iid=Iid;
     this.Oid=Oid;
     this.sid=sid;
-    this.Ireview=Ireview;
+    this.Ireview=Ireview;  
     this.Icomment=Icomment;
     this.Uid=Uid;
 }
