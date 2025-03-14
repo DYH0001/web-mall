@@ -35,7 +35,7 @@ public class OrderServiceImpl implements OrderService {
     }
 
     @Override
-    public boolean deleteOrder(int oid) throws SQLException {
+    public boolean deleteOrder(String oid) throws SQLException {
         try {
             return orderDao.deleteOrder(oid);
         } catch (SQLException e) {

@@ -18,4 +18,35 @@ public Address( String Address_telephone, String AddressID, String province, Str
     this.Street = Street;
     this.detail = detail;
 }
+public String getAddress_telephone() {
+        return Address_telephone;
+    }
+
+    public void setAddress_telephone(String address_telephone) {
+        Address_telephone = address_telephone;
+    }
+
+    public String getAddressID() {
+        return AddressID;
+    }
+
+    public void setAddressID(String addressID) {
+        AddressID = addressID;
+    }
+
+    public String getProvince() {
+        return province;
+    }
+
+    public void setProvince(String province) {
+        this.province = province;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
 }

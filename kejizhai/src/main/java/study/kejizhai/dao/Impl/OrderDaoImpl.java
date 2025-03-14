@@ -72,7 +72,7 @@ public class OrderDaoImpl implements OrderDao {
 
     @Override
     @Transactional
-    public boolean deleteOrder(int oid) throws SQLException {
+    public boolean deleteOrder(String oid) throws SQLException {
         try {
             String deleteItemsSql = "DELETE FROM order_items WHERE oid = ?";
             jdbcTemplate.update(deleteItemsSql, oid);
