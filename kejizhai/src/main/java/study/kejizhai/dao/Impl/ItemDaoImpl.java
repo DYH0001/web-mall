@@ -16,7 +16,7 @@ public class ItemDaoImpl implements ItemDao {
     private JdbcTemplate jdbcTemplate;
 
     @Override
-    public List<Items> getItem(int iid) throws SQLException {
+    public List<Items> getItems(String iid) throws SQLException {
         String sql = "SELECT * FROM items WHERE iid = ?";
         try {
             return jdbcTemplate.query(sql, new BeanPropertyRowMapper<>(Items.class), iid);

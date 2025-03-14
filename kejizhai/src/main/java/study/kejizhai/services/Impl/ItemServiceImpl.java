@@ -15,9 +15,9 @@ public class ItemServiceImpl implements ItemService {
     private ItemDao itemDao;
 
     @Override
-    public List<Items> getItem(int iid) throws SQLException {
+    public List<Items> getItems(String iid) throws SQLException {
         try {
-            return itemDao.getItem(iid);
+            return itemDao.getItems(iid);
         } catch (SQLException e) {
             throw new SQLException("获取商品信息失败: " + e.getMessage());
         }
