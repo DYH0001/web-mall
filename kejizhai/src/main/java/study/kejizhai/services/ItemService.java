@@ -11,5 +11,5 @@ public interface ItemService {
     public boolean deleteItem(int iid) throws SQLException;
     
     public List<Items> getItems() throws SQLException;
-    public int setIstatus(int iid) throws SQLException;  // 这个方法也应该抛出SQLException
+    public int setIstatus(int iid) throws SQLException;
 }
