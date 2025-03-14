@@ -17,7 +17,7 @@ public class OrderServiceImpl implements OrderService {
     private OrderDao orderDao;
 
     @Override
-    public List<Order> getOrders(int uid) throws SQLException {
+    public List<Order> getOrders(String uid) throws SQLException {
         try {
             return orderDao.getOrders(uid);
         } catch (SQLException e) {

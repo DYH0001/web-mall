@@ -18,7 +18,7 @@ public class OrderDaoImpl implements OrderDao {
     private JdbcTemplate jdbcTemplate;
 
     @Override
-    public List<Order> getOrders(int uid) throws SQLException {
+    public List<Order> getOrders(String uid) throws SQLException {
         String sql = "SELECT o.*, oi.iid, oi.count, oi.price FROM orders o " +
                     "LEFT JOIN order_items oi ON o.oid = oi.oid " +
                     "WHERE o.uid = ?";

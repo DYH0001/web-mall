@@ -77,4 +77,16 @@ public void setPassword(String password) {
 public String getUid() {
     return Uid;
 }
+public boolean isPhoneVerified() {
+    return isPhoneVerified;
+}
+public boolean isEmailVerified() {
+    return isEmailVerified;
+}
+public Date getCreateTime() {
+    return CreateTime;
+}
+public Date getUpdateTime() {
+    return UpdateTime;
+}
 }
