@@ -241,7 +241,7 @@ body {
     gap: 20px;
     position: relative;
     left: 268px;
-    top: 150px;
+    top: 100px;
 }
 
 /* 单个商品卡片样式 */
@@ -289,4 +289,9 @@ body {
 
 .buy-btn:hover {
     background-color: #008c94;
+}
+.this_side_service {
+    background-color: #00adb5;
+    color: #ffffff;
+    font-weight: bold;
 }
