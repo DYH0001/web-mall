@@ -2,6 +2,8 @@ package study.kejizhai.dao.Impl;
 
 import study.kejizhai.bean.Users;
 import study.kejizhai.dao.UserDao;
+import study.kejizhai.bean.Address;
+import study.kejizhai.bean.Order;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
@@ -97,8 +99,8 @@ public class UserDaoImpl implements UserDao {
         }
     }
 
-    // 实现 UserService 中用到的其他方法
-    public Users login(Users users) throws SQLException {
+    @Override
+    public boolean login(Users users) throws SQLException {
         String sql = "SELECT * FROM users WHERE uid = ? AND password_hash = ?";
         try {
             List<Users> result = jdbcTemplate.query(sql,
@@ -106,7 +108,7 @@ public class UserDaoImpl implements UserDao {
                 users.getUid(),
                 users.getPassword()
             );
-            return result.isEmpty() ? null : result.get(0);
+            return result.isEmpty() ? false : true;
         } catch (Exception e) {
             throw new SQLException("用户登录失败: " + e.getMessage());
         }
@@ -136,6 +138,43 @@ public class UserDaoImpl implements UserDao {
 
     public boolean updateuserinfo(Users user) throws SQLException {
         return changeUser(user);
+    }
+
+    @Override
+    public boolean updateAddress(Users user, Address address) throws SQLException {
+        String sql = "UPDATE users SET address_id = ?, update_time = ? WHERE uid = ?";
+        try {
+            int result = jdbcTemplate.update(sql,
+                address.getAddressID(),
+                new Date(),
+                user.getUid()
+            );
+            return result > 0;
+        } catch (Exception e) {
+            throw new SQLException("更新地址失败: " + e.getMessage());
+        }
+    }
+
+    @Override
+    public boolean verifyPhone(String uid, String phone) throws SQLException {
+        String sql = "UPDATE users SET telephone = ?, is_phone_verified = true, update_time = ? WHERE uid = ?";
+        try {
+            int result = jdbcTemplate.update(sql, phone, new Date(), uid);
+            return result > 0;
+        } catch (Exception e) {
+            throw new SQLException("手机验证失败: " + e.getMessage());
+        }
+    }
+
+    @Override
+    public boolean verifyEmail(String uid, String email) throws SQLException {
+        String sql = "UPDATE users SET email = ?, is_email_verified = true, update_time = ? WHERE uid = ?";
+        try {
+            int result = jdbcTemplate.update(sql, email, new Date(), uid);
+            return result > 0;
+        } catch (Exception e) {
+            throw new SQLException("邮箱验证失败: " + e.getMessage());
+        }
     }
 }
 

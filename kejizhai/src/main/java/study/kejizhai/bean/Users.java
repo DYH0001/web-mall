@@ -89,4 +89,33 @@ public Date getCreateTime() {
 public Date getUpdateTime() {
     return UpdateTime;
 }
+
+// 添加缺失的 setter 方法
+public void setUid(String uid) {
+    this.Uid = uid;
+}
+
+public void setPhoneVerified(boolean isPhoneVerified) {
+    this.isPhoneVerified = isPhoneVerified;
+}
+
+public void setEmailVerified(boolean isEmailVerified) {
+    this.isEmailVerified = isEmailVerified;
+}
+
+public void setCreateTime(Date createTime) {
+    this.CreateTime = createTime;
+}
+
+public void setUpdateTime(Date updateTime) {
+    this.UpdateTime = updateTime;
+}
+
+public List<Order> getUserOrders() {
+    return userOrders;
+}
+
+public void setUserOrders(List<Order> userOrders) {
+    this.userOrders = userOrders;
+}
 }
