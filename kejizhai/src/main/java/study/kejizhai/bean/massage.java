@@ -2,12 +2,11 @@ package study.kejizhai.bean;
 
 import java.util.Date;
 import java.util.List;
-import java.util.ArrayList;
 import java.util.Optional;
 
 public class Massage {
     private String senderId;
-    private List<String> massageId;
+    private String massageId;
     private List<String> Content;
     private Date startTime;
     private Date endTime;
@@ -16,12 +15,11 @@ public class Massage {
 
     public Massage(){}
 
-    public Massage(String senderId, List<String> massageId, List<String> Content, Date startTime, Date endTime, Optional<String> receiverId, int MassageType){
+    public Massage(String senderId, String massageId, List<String> Content, Date startTime, Date endTime, Optional<String> receiverId, int MassageType){
         this.senderId = senderId;
         this.massageId = massageId;
         this.Content = Content;
         this.startTime = startTime;
-        this.endTime = endTime;
         this.receiverId = receiverId;
         this.MassageType = MassageType;
     }
@@ -31,10 +29,10 @@ public class Massage {
     public void setSenderId(String senderId){
         this.senderId = senderId;
     }
-    public List<String> getMassageId(){
+    public String getMassageId(){
         return massageId;
     }
-    public void setMassageId(List<String> massageId){
+    public void setMassageId(String massageId){
         this.massageId = massageId;
     }
     public List<String> getContent(){
@@ -67,4 +65,6 @@ public class Massage {
     public void setMassageType(int MassageType){
         this.MassageType = MassageType;
     }
+
+
 }
