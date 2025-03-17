@@ -1,0 +1,297 @@
+.nav {
+    background-color: #000000;
+    color: #ffffff;
+    height: 70px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    justify-content: space-between;
+}
+
+.logo {
+    height: 40px;
+    width: 300px;
+    padding: 5px;
+}
+
+.search {
+    height: 30px;
+    width: 600px;
+    padding: 5px;
+    margin-right: 10px;
+    border: 1px solid #ffffff;
+    border-radius: 4px;
+    background-color: #333333;
+    color: #ffffff;
+}
+
+.search_bottom {
+    height: 30px;
+    width: 60px;
+    border: none;
+    border-radius: 4px;
+    background-color: #ffffff;
+    color: #000000;
+    cursor: pointer;
+}
+
+.avatar {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.icon {
+    height: 50px;
+    width: 50px;
+    margin-right: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.icon.avatar-icon {
+    margin-right: 30px; /* 更大的间距推到右边 */
+}
+.toolbar {
+    background-color: #5b5b5b;
+    color: #ffffff;
+    height: 20px;
+    position: fixed;
+    width: 100%;
+    top: 70px;
+    z-index: 1;
+}
+.service {
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    padding: 0 20px;
+    color: #ffffff;
+    font-style: SthHeiti;
+    font-size: 14px;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background: url('../../../img/background.jpg') no-repeat center center;
+    background-size: cover;
+    
+}
+.side {
+    position: fixed;
+    top: 110px;
+    left: 0;
+    width: 220px;
+    height: 100%;
+    background-color: #1f1f1f;
+    color: #ffffff;
+    padding: 0px 20px;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.2);
+    border-radius: 0 8px 8px 0;
+}
+.this_side_service, .side_service {
+    display: block;
+    font-size: 18px;
+    padding: 20px 15px;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+.this_side_service {
+    background-color: #00adb5;
+    color: #ffffff;
+    font-weight: bold;
+}
+.side_service {
+    color: #d1d1d1;
+}
+.side_service:hover {
+    background-color: #393e46;
+    color: #ffffff;
+    transform: translateX(5px);
+}
+.separator, .separator1 {
+    margin: 0 0;
+    border-bottom: 1px solid #444444;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background: url('../../../img/background.jpg') no-repeat center center;
+    background-size: cover;
+}
+#none{
+    text-decoration: none;
+}
+.carousel {
+
+    position: relative;
+    width: 1000px;
+    height: 400px;
+    margin: auto;
+    overflow: hidden;
+    top:100px
+}
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+.carousel-item {
+    min-width: 100%;
+    transition: opacity 0.5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.carousel-item.active {
+    opacity: 1;
+    position: relative;
+}
+.carousel-item img {
+    width: 100%;
+    display: block;
+}
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+.carousel-control.prev {
+    left: 0;
+}
+.carousel-control.next {
+    right: 0;
+}
+/* 活动图标的整体容器 */
+.activity-container {
+    position: absolute; /* 确保它能相对定位到轮播图的右边 */
+    top: 100px; /* 与轮播图对齐 */
+    left: 1350px; /* 根据轮播图的宽度（1000px）+ 间距（120px）调整 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* 单个活动图标样式 */
+.activity {
+    width: 144px;
+    height: 81px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.products {
+    margin-top: 20px;
+    width: 1000px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.product {
+    background-color: white;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+.line {
+    width: 1000px;
+    height: 20px;
+    background-color: #5b5b5b;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    position: relative;
+    left: 268px;
+    top: 120px;
+}
+.line-text {
+    position: absolute;
+    left: 50px;
+    top: -12px;
+    transform: translateX(-50%);
+    background-color: #5b5b5b;
+    color: white;
+    padding: 0 10px;
+    border-radius: 8px;
+}
+.products {
+    margin-top: 50px;
+    width: 1000px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    position: relative;
+    left: 268px;
+    top: 100px;
+}
+
+/* 单个商品卡片样式 */
+.product {
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.product-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+}
+
+.product-title {
+    margin: 10px 0;
+    font-size: 16px;
+    color: #333333;
+}
+
+.product-price {
+    color: #ff4c4c;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.buy-btn {
+    background-color: #00adb5;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.buy-btn:hover {
+    background-color: #008c94;
+}
+.this_side_service {
+    background-color: #00adb5;
+    color: #ffffff;
+    font-weight: bold;
+}

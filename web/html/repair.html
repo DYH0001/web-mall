@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ZH-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>维修专区 - 科技宅</title>
+    <link rel="stylesheet" href="css/home.css">
+    <style>
+    .repair-form {
+    margin: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 120px;
+    margin-left: 260px;
+}
+
+.repair-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.repair-form select,
+.repair-form textarea,
+.repair-form input[type="file"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.submit-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: #45a049;
+}
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <img src="/img/logo.png" alt="这是我们的logo" class="logo"> 
+        <input type="text" placeholder="搜索" class="search" >
+        <img src="/img/search.png" alt="搜索" class="search_bottom">
+        <img src="/img/preview.gif" alt="头像" class="icon">
+        <img src="/img/cart.png" alt="购物车" class="icon">  
+        <img src="/img/collection.png" alt="收藏" class="icon">
+        <img src="/img/message.png" alt="消息" class="icon">
+        <img src="/img/seetings.png" alt="设置" class="icon">
+    </div>
+    <div class="toolbar">
+        <a href="home.html" class="service" id="none">在线商城</a>
+        <a href="flea_market.html" class="service" id="none">二手市场</a>
+        <a href="#" class="service" id="none">维修专区</a>
+        <a href="blog.html" class="service" id="none">社区论坛</a>
+        <a href="Offline_experience.html" class="service" id="none">线下体验</a>
+        <a href="course.html" class="service" id="none">技术学习</a>
+    </div>
+    <div class="side">
+        <div class="separator1"></div>
+        <a href="new_product.html" class="side_service" id="none">新品发布</a>
+        <br>
+        <div class="separator"></div>
+        <a href="hot_events.html" class="side_service" id="none">热门活动</a>
+        <br>
+        <div class="separator"></div>
+        <a href="tech_news.html" class="side_service" id="none">科技资讯</a>
+        <br>
+        <div class="separator"></div>
+        <a href="access.html" class="side_service" id="none">科技评测</a>
+        <br>
+        <div class="separator"></div>
+        <a href="sale.html" class="side_service" id="none">特价产品</a>
+        <br>
+        <div class="separator"></div>
+        <a href="recomended.html" class="side_service" id="none">大佬推荐</a>
+        <br>
+        <div class="separator"></div>
+        <a href="arroundus.html" class="side_service" id="none">周边科技</a>
+        <br>
+        <div class="separator"></div>
+    </div>
+    <div class="line">
+        <div class="line-text">提交维修请求</div>
+    </div>
+    <div class="repair-form">
+        <form id="repairForm">
+            <label for="itemType">需要维修的物品种类:</label>
+            <select id="itemType" name="itemType" required>
+                <option value="手机">手机</option>
+                <option value="台式电脑">台式电脑</option>
+                <option value="笔记本电脑">笔记本电脑</option>
+                <option value="电脑配件">电脑配件</option>
+                <option value="其他">其他</option>
+            </select>
+            <br>
+            <label for="description">详细描述:</label>
+            <textarea id="description" name="description" rows="4" required></textarea>
+            <br>
+            <label for="image">图片:</label>
+            <input type="file" id="image" name="image" accept="image/*" required>
+            <br>
+            <button type="submit" class="submit-btn">提交</button>
+        </form>
+    </div>
+</body>
+</html>
