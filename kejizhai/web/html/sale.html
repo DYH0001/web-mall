@@ -3,15 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>在线商城 - 科技宅</title>
+    <title>特价产品 - 科技宅</title>
     <link rel="stylesheet" href="css/home.css">
-    <script src="js/shop.js"></script>
+    <style>
+      
+        .this_side_service {
+            background-color: #00adb5;
+            color: #ffffff;
+            font-weight: bold;
+        }
+    </style>
+    <script src="js/search.js"></script>
 </head>
 <body>
     <div class="nav">
         <img src="/img/logo.png" alt="这是我们的logo" class="logo"> 
-        <input type="text" placeholder="搜索" class="search" >
-        <img src="/img/search.png" alt="搜索" class="search_bottom">
+        <input type="text" placeholder="搜索" class="search" id="searchInput">
+        <img src="/img/search.png" alt="搜索" class="search_bottom" id="searchButton">
         <img src="/img/preview.gif" alt="头像" class="icon">
         <img src="/img/cart.png" alt="购物车" class="icon">  
         <img src="/img/collection.png" alt="收藏" class="icon">
@@ -19,7 +27,7 @@
         <img src="/img/seetings.png" alt="设置" class="icon">
     </div>
     <div class="toolbar">
-        <a href="#" class="service" id="none">在线商城</a>
+        <a href="home.html" class="service" id="none">在线商城</a>
         <a href="flea_market.html" class="service" id="none">二手市场</a>
         <a href="repair.html" class="service" id="none">维修专区</a>
         <a href="blog.html" class="service" id="none">社区论坛</a>
@@ -28,7 +36,7 @@
     </div>
     <div class="side">
         <div class="separator1"></div>
-        <a href="new_product.html" class="side_service" id="none">新品发布</a>
+        <a href="new_products.html" class="side_service" id="none">新品发布</a>
         <br>
         <div class="separator"></div>
         <a href="hot_events.html" class="side_service" id="none">热门活动</a>
@@ -40,7 +48,7 @@
         <a href="access.html" class="side_service" id="none">科技评测</a>
         <br>
         <div class="separator"></div>
-        <a href="sale.html" class="side_service" id="none">特价产品</a>
+        <a href="sale.html" class="this_side_service" id="none">特价产品</a>
         <br>
         <div class="separator"></div>
         <a href="recomended.html" class="side_service" id="none">大佬推荐</a>
@@ -135,6 +143,5 @@
             <p class="product-price">￥1999</p>
             <button class="buy-btn">立即购买</button>
         </div>
-    </div>
 </body>
 </html>
