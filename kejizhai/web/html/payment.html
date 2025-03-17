@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ZH-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的交易</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: url('../../../img/background.jpg') no-repeat center center;
+            background-size: cover;
+            font-family: 'Arial', sans-serif;
+        }
+        .nav {
+            background-color: #222831;
+            color: #eeeeee;
+            height: 70px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            justify-content: space-between;
+        }
+        .logo {
+            height: 50px;
+        }
+        .search_container {
+            display: flex;
+            align-items: center;
+        }
+        .search {
+            height: 40px;
+            width: 500px;
+            padding: 5px 10px;
+            margin-right: 10px;
+            border: 1px solid #393e46;
+            border-radius: 8px;
+            background-color: #393e46;
+            color: #eeeeee;
+            outline: none;
+            transition: all 0.3s;
+        }
+        .search:focus {
+            border-color: #00adb5;
+            background-color: #222831;
+        }
+        .search_bottom {
+            height: 40px;
+            width: 80px;
+            border: none;
+            border-radius: 8px;
+            background-color: #00adb5;
+            color: #ffffff;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .search_bottom:hover {
+            background-color: #028a8a;
+        }
+        .side {
+            position: fixed;
+            top: 90px;
+            left: 0;
+            width: 220px;
+            height: 100%;
+            background-color: #1f1f1f;
+            color: #ffffff;
+            padding: 30px 20px;
+            box-shadow: 2px 0 8px rgba(0, 0, 0, 0.2);
+            border-radius: 0 8px 8px 0;
+        }
+        .this_side_service, .side_service {
+            display: block;
+            font-size: 18px;
+            padding: 12px 15px;
+            margin: 8px 0;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .this_side_service {
+            background-color: #00adb5;
+            color: #ffffff;
+            font-weight: bold;
+        }
+        .side_service {
+            color: #d1d1d1;
+        }
+        .side_service:hover {
+            background-color: #393e46;
+            color: #ffffff;
+            transform: translateX(5px);
+        }
+        .separator, .separator1 {
+            margin: 15px 0;
+            border-bottom: 1px solid #444444;
+        }
+        .orders_area {
+            margin: 100px auto;
+            padding: 30px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 8px;
+            max-width: 1000px;
+            margin-left: 300px; /* 向右移动，避免遮挡 */
+        }
+        .orders_area h2 {
+            text-align: center;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+        .order_section {
+            margin-bottom: 30px;
+        }
+        .order_item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            background-color: #f0f0f0;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+        .order_item img {
+            width: 80px;
+            height: 80px;
+            border-radius: 5px;
+        }
+        .item_info {
+            flex-grow: 1;
+            margin-left: 15px;
+        }
+        .item_name {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+        .item_status {
+            color: #00adb5;
+            font-weight: bold;
+        }
+        .button_group {
+            display: flex;
+            gap: 10px;
+        }
+        .action_button {
+            padding: 5px 10px;
+            background-color: #ff4d4d;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .action_button:hover {
+            background-color: #cc0000;
+        }
+    </style>
+    <script src="js/search.js"></script>
+</head>
+<body>
+    <div class="nav">
+        <img src="/img/logo.png" alt="这是我们的logo" class="logo"> 
+        <div class="search_container">
+            <input type="text" class="search" placeholder="搜索" id="searchInput">
+            <button class="search_bottom" id="searchBottom">搜索</button>
+        </div>
+    </div>
+    <div class="side">
+        <div class="separator1"></div>
+        <a href="users.html" class="side_service">我的主页</a>
+        <div class="separator"></div>
+        <a href="cart.html" class="side_service">购物车</a>
+        <a href="collection.html" class="side_service">我的收藏</a>
+        <a href="#" class="this_side_service">我的交易</a>
+        <a href="message.html" class="side_service">我的消息</a>
+        <a href="mypost.html" class="side_service">我的发帖</a>
+        <a href="sell.html" class="side_service">我的出售</a>
+    </div>
+    <div class="orders_area">
+        <h2>我的交易</h2>
+        
+        <!-- 用户的购买订单 -->
+        <div class="order_section">
+            <h3>我购买的订单</h3>
+            <div class="order_item">
+                <img src="/img/product1.jpg" alt="商品图片">
+                <div class="item_info">
+                    <div class="item_name">商品 A</div>
+                    <div class="item_status">状态：待发货</div>
+                </div>
+                <div class="button_group">
+                    <button class="action_button">取消订单</button>
+                    <button class="action_button">联系客服</button>
+                </div>
+            </div>
+            <div class="order_item">
+                <img src="/img/product1.jpg" alt="商品图片">
+                <div class="item_info">
+                    <div class="item_name">商品 A</div>
+                    <div class="item_status">状态：待发货</div>
+                </div>
+                <div class="button_group">
+                    <button class="action_button">取消订单</button>
+                    <button class="action_button">联系客服</button>
+                </div>
+            </div>
+            <div class="order_item">
+                <img src="/img/product1.jpg" alt="商品图片">
+                <div class="item_info">
+                    <div class="item_name">商品 A</div>
+                    <div class="item_status">状态：待发货</div>
+                </div>
+                <div class="button_group">
+                    <button class="action_button">取消订单</button>
+                    <button class="action_button">联系客服</button>
+                </div>
+            </div>
+        </div>
+
+        ]
+    </div>
+</body>
+</html>

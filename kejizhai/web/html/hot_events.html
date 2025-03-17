@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ZH-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>热门活动 - 科技宅</title>
+    <link rel="stylesheet" href="css/home.css">
+    <style>
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-top: 0 px;
+            margin: left 0;;
+        }
+
+        .product {
+            flex: 1 1 calc(33.333% - 40px);
+            margin: 10px;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .product img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .product h3 {
+            margin: 10px 0;
+            font-size: 18px;
+        }
+
+        .product p {
+            margin: 5px 0;
+        }
+
+        .product .price {
+            font-size: 16px;
+            color: #555;
+        }
+
+        .buy-btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .buy-btn:hover {
+            background-color: #45a049;
+        }
+
+        .this_side_service {
+            background-color: #00adb5;
+            color: #ffffff;
+            font-weight: bold;
+        }
+    </style>
+    <script src="js/search.js"></script>
+</head>
+<body>
+    <div class="nav">
+        <img src="/img/logo.png" alt="这是我们的logo" class="logo"> 
+        <input type="text" placeholder="搜索" class="search" id="searchInput">
+        <img src="/img/search.png" alt="搜索" class="search_bottom" id="searchButton">
+        <img src="/img/preview.gif" alt="头像" class="icon">
+        <img src="/img/cart.png" alt="购物车" class="icon">  
+        <img src="/img/collection.png" alt="收藏" class="icon">
+        <img src="/img/message.png" alt="消息" class="icon">
+        <img src="/img/seetings.png" alt="设置" class="icon">
+    </div>
+    <div class="toolbar">
+        <a href="home.html" class="service" id="none">在线商城</a>
+        <a href="flea_market.html" class="service" id="none">二手市场</a>
+        <a href="repair.html" class="service" id="none">维修专区</a>
+        <a href="blog.html" class="service" id="none">社区论坛</a>
+        <a href="Offline_experience.html" class="service" id="none">线下体验</a>
+        <a href="course.html" class="service" id="none">技术学习</a>
+    </div>
+    <div class="side">
+        <div class="separator1"></div>
+        <a href="new_product.html" class="side_service" id="none">新品发布</a>
+        <br>
+        <div class="separator"></div>
+        <a href="hot_events.html" class="this_side_service" id="none">热门活动</a>
+        <br>
+        <div class="separator"></div>
+        <a href="tech_news.html" class="side_service" id="none">科技资讯</a>
+        <br>
+        <div class="separator"></div>
+        <a href="access.html" class="side_service" id="none">科技评测</a>
+        <br>
+        <div class="separator"></div>
+        <a href="sale.html" class="side_service" id="none">特价产品</a>
+        <br>
+        <div class="separator"></div>
+        <a href="recomended.html" class="side_service" id="none">大佬推荐</a>
+        <br>
+        <div class="separator"></div>
+        <a href="arroundus.html" class="side_service" id="none">周边科技</a>
+        <br>
+        <div class="separator"></div>
+    </div>
+    <div class="products">
+        <!-- 单个活动卡片 -->
+        <div class="product">
+            <img src="https://via.placeholder.com/150" alt="活动1" class="product-img">
+            <h3 class="product-title">双十一大促销</h3>
+            <p class="product-price">全场商品五折起</p>
+            <button class="buy-btn">了解更多</button>
+        </div>
+        
+        <div class="product">
+            <img src="https://via.placeholder.com/150" alt="活动2" class="product-img">
+            <h3 class="product-title">新品发布会</h3>
+            <p class="product-price">最新科技产品抢先体验</p>
+            <button class="buy-btn">了解更多</button>
+        </div>
+        
+        <div class="product">
+            <img src="https://via.placeholder.com/150" alt="活动3" class="product-img">
+            <h3 class="product-title">会员专享优惠</h3>
+            <p class="product-price">会员专属折扣，尽享优惠</p>
+            <button class="buy-btn">了解更多</button>
+        </div>
+        
+        <div class="product">
+            <img src="https://via.placeholder.com/150" alt="活动4" class="product-img">
+            <h3 class="product-title">限时秒杀</h3>
+            <p class="product-price">每日限时秒杀，抢到就是赚到</p>
+            <button class="buy-btn">了解更多</button>
+        </div>
+        
+        <div class="product">
+            <img src="https://via.placeholder.com/150" alt="活动5" class="product-img">
+            <h3 class="product-title">积分兑换</h3>
+            <p class="product-price">积分兑换好礼，惊喜不断</p>
+            <button class="buy-btn">了解更多</button>
+        </div>
+        
+        <div class="product">
+            <img src="https://via.placeholder.com/150" alt="活动6" class="product-img">
+            <h3 class="product-title">抽奖活动</h3>
+            <p class="product-price">参与抽奖，赢取丰厚奖品</p>
+            <button class="buy-btn">了解更多</button>
+        </div>
+    </div>
+</body>
+</html>
