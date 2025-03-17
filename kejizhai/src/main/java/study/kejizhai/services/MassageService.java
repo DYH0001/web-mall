@@ -4,9 +4,8 @@ import study.kejizhai.bean.Massage;
 
 public interface  MassageService {
     public String getMassageId(Massage massage);
-    public void addMassage(Massage massage);
-    public void deleteMassage(Massage massage);
-    public void withdrawMessage(Massage massage);
+    public void deleteMassage(String massageId);
+    public void withdrawMessage(String massageId);
     public Massage getMassageByID(String massageId);
     public boolean isRead(Massage massage);
 }
