@@ -17,7 +17,7 @@ public class MassageServiceImpl implements MassageService {
     @Override
     public void sendMassage(Massage massage) {
         try {
-            MassageDao.sendMassage(massage);
+            massageDao.sendMassage(massage);
         } catch (SQLException e) {
             e.printStackTrace();
         }

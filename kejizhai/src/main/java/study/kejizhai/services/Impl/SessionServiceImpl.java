@@ -22,7 +22,7 @@ public class SessionServiceImpl implements SessionService {
     public void addSession(List<Users> users) {
         try {
             sessionDao.addSession(users);
-        } catch (Exception e) {
+        } catch (SQLException e) {
             e.printStackTrace();
         }
     }
@@ -31,7 +31,7 @@ public class SessionServiceImpl implements SessionService {
     public void deleteSession(String sessionId) {
         try {
             sessionDao.deleteSession(sessionId);
-        } catch (Exception e) {
+        } catch (SQLException e) {
             e.printStackTrace();
         }
     }
@@ -40,7 +40,7 @@ public class SessionServiceImpl implements SessionService {
     public Session getSessionByID(String sessionId) {
         try {
             return sessionDao.getSessionByID(sessionId);
-        } catch (Exception e) {
+        } catch (SQLException e) {
             e.printStackTrace();
             return null;
         }
@@ -63,7 +63,7 @@ public class SessionServiceImpl implements SessionService {
                 session.setIsActive(false);
                 sessionDao.updateSession(session);
                 return false;
-            } catch (Exception e) {
+            } catch (SQLException e) {
                 e.printStackTrace();
                 return false;
             }
