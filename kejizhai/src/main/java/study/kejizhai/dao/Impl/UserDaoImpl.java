@@ -1,18 +1,18 @@
 package study.kejizhai.dao.Impl;
 
-import study.kejizhai.bean.Users;
-import study.kejizhai.dao.UserDao;
-import study.kejizhai.bean.Address;
-import study.kejizhai.bean.Order;
+import java.sql.SQLException;
+import java.util.Date;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
+import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.sql.SQLException;
-import java.util.List;
-import java.util.Date;
+import study.kejizhai.bean.Address;
+import study.kejizhai.bean.Users;
+import study.kejizhai.dao.UserDao;
 
 @Repository
 @Transactional
