@@ -52,4 +52,14 @@ public class Session{
     public void setIsActive(boolean isActive){
         this.isActive = isActive;
     }
+    
+    // 添加获取消息列表的方法
+    public List<Massage> getMassages() {
+        return massages;
+    }
+    
+    // 添加设置消息列表的方法
+    public void setMassages(List<Massage> massages) {
+        this.massages = massages;
+    }
 }

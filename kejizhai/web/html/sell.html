@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ZH-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的出售</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: url('../../../img/background.jpg') no-repeat center center;
+            background-size: cover;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            flex-direction: column;
+        }
+        .nav {
+            background-color: #222831;
+            color: #eeeeee;
+            height: 70px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            justify-content: space-between;
+        }
+        .logo {
+            height: 50px;
+        }
+        .side {
+            position: fixed;
+            top: 90px;
+            left: 0;
+            width: 220px;
+            height: 100%;
+            background-color: #1f1f1f;
+            color: #ffffff;
+            padding: 30px 20px;
+            box-shadow: 2px 0 8px rgba(0, 0, 0, 0.2);
+            border-radius: 0 8px 8px 0;
+        }
+        .side_service, .this_side_service {
+            display: block;
+            font-size: 18px;
+            padding: 12px 15px;
+            margin: 8px 0;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .this_side_service {
+            background-color: #00adb5;
+            color: #ffffff;
+            font-weight: bold;
+        }
+        .side_service {
+            color: #d1d1d1;
+        }
+        .side_service:hover {
+            background-color: #393e46;
+            color: #ffffff;
+            transform: translateX(5px);
+        }
+        .sell_container {
+            margin: 100px auto;
+            padding: 40px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 8px;
+            max-width: 1200px;
+            margin-left: 300px;
+        }
+        .product_item {
+            padding: 30px;
+            margin-bottom: 30px;
+            background-color: #f0f0f0;
+            border-radius: 10px;
+            display: flex;
+            align-items: flex-start;
+            transition: background-color 0.3s;
+            border-left: 8px solid #00adb5;
+        }
+        .product_item:hover {
+            background-color: #e0e0e0;
+        }
+        .product_image {
+            width: 150px;
+            height: 150px;
+            margin-right: 30px;
+            border-radius: 6px;
+            background-color: #ccc;
+        }
+        .product_details {
+            flex-grow: 1;
+        }
+        .product_title {
+            font-size: 26px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 12px;
+        }
+        .product_text {
+            width: 700px;
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 15px;
+        }
+        .product_info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 10px;
+        }
+        .product_price, .product_stock {
+            font-size: 18px;
+            color: #444;
+        }
+        .product_buttons {
+            display: flex;
+            gap: 12px;
+        }
+        .edit_button, .delete_button {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .edit_button {
+            background-color: #00adb5;
+            color: white;
+        }
+        .delete_button {
+            background-color: #ff3e3e;
+            color: white;
+        }
+        .edit_button:hover {
+            background-color: #008b91;
+        }
+        .delete_button:hover {
+            background-color: #cc3232;
+        }
+    </style>
+    <script src="js/search.js"></script>
+</head>
+<body>
+    <div class="nav">
+        <img src="/img/logo.png" alt="这是我们的logo" class="logo"> 
+    </div>
+    <div class="side">
+        <a href="users.html" class="side_service">我的主页</a>
+        <a href="cart.html" class="side_service">购物车</a>
+        <a href="collection.html" class="side_service">我的收藏</a>
+        <a href="payment.html" class="side_service">我的交易</a>
+        <a href="sell.html" class="side_service">我的消息</a>
+        <a href="mypost.html" class="side_service">我的发帖</a>
+        <a href="#" class="this_side_service">我的出售</a>
+    </div>
+    <div class="sell_container">
+        <div class="product_item">
+            <div class="product_image"></div>
+            <div class="product_details">
+                <div class="product_title">RTX690战术核显卡</div>
+                <div class="product_text">一发一个航母战斗群</div>
+                <div class="product_info">
+                    <div class="product_price">价格：¥99</div>
+                    <div class="product_stock">库存：20 | 已售：15</div>
+                </div>
+            </div>
+            <div class="product_buttons">
+                <button class="edit_button">编辑</button>
+                <button class="delete_button">删除</button>
+            </div>
+        </div>
+
+        <div class="product_item">
+            <div class="product_image"></div>
+            <div class="product_details">
+                <div class="product_title">rx580显卡 矿卡圣女</div>
+                <div class="product_text">矿卡圣女尽显高端品质</div>
+                <div class="product_info">
+                    <div class="product_price">价格：¥150</div>
+                    <div class="product_stock">库存：10 | 已售：5</div>
+                </div>
+            </div>
+            <div class="product_buttons">
+                <button class="edit_button">编辑</button>
+                <button class="delete_button">删除</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

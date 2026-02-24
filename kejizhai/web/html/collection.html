@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ZH-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的收藏</title>
+    <link rel="stylesheet" href="css/collection.css">
+    <script src="js/search.js"></script>
+</head>
+<body>
+    <div class="nav">
+        <img src="/img/logo.png" alt="这是我们的logo" class="logo"> 
+        <div class="search_container">
+            <input type="text" class="search" placeholder="搜索商品" id="searchInput">
+            <button class="search_bottom">搜索</button id="searchButton">
+        </div>
+    </div>
+    <div class="side">
+        <div class="separator1"></div>
+        <a href="users.html" class="side_service">我的主页</a>
+        <div class="separator"></div>
+        <a href="cart.html" class="side_service">购物车</a>
+        <a href="#" class="this_side_service">我的收藏</a>
+        <a href="payment.html" class="side_service">我的交易</a>
+        <a href="message.html" class="side_service">我的消息</a>
+        <a href="mypost.html" class="side_service">我的发帖</a>
+        <a href="sell.html" class="side_service">我的出售</a>
+    </div>
+    <div class="favorites_area">
+        <h2>我的收藏</h2>
+        
+        <!-- 模拟的收藏项目 -->
+        <div class="favorite_item">
+            <img src="/img/product1.jpg" alt="商品图片">
+            <div class="item_info">
+                <div class="item_name">收藏商品1</div>
+                <div class="item_price">￥99.99</div>
+            </div>
+            <button class="remove_button">移除收藏</button>
+        </div>
+        
+        <div class="favorite_item">
+            <img src="/img/product2.jpg" alt="商品图片">
+            <div class="item_info">
+                <div class="item_name">收藏商品2</div>
+                <div class="item_price">￥149.99</div>
+            </div>
+            <button class="remove_button">移除收藏</button>
+        </div>
+        
+        <div class="favorite_item">
+            <img src="/img/product3.jpg" alt="商品图片">
+            <div class="item_info">
+                <div class="item_name">收藏商品3</div>
+                <div class="item_price">￥59.99</div>
+            </div>
+            <button class="remove_button">移除收藏</button>
+        </div>
+    </div>
+</body>
+</html>
